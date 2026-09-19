@@ -37,7 +37,7 @@ export default function ModelExplainability({
       setError("");
 
       const response = await fetch(
-        "${process.env.NEXT_PUBLIC_API_URL}/predict/ml/explain",
+        `${process.env.NEXT_PUBLIC_API_URL}/predict/ml/explain`,
         {
           method: "POST",
           headers: {

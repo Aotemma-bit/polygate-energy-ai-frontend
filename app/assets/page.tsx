@@ -66,11 +66,11 @@ export default function AssetHealthPage() {
         failureModesResponse,
         recommendationsResponse,
       ] = await Promise.all([
-        fetch("${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/intelligence"),
-        fetch("${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/risk"),
-        fetch("${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/failure-modes"),
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/intelligence`),
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/risk`),
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/failure-modes`),
         fetch(
-          "${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/maintenance-recommendations"
+          `${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/maintenance-recommendations`
         ),
       ]);
 
@@ -225,7 +225,7 @@ export default function AssetHealthPage() {
           />
           <Metric
             label="Latest Temperature"
-            value={`${latest?.temperature ?? ""} °C`}
+            value={`${latest?.temperature ?? ""} Â°C`}
           />
         </section>
 
@@ -244,7 +244,7 @@ export default function AssetHealthPage() {
               label="Temperature"
               value={latest?.temperature}
               change={temperatureChange}
-              unit="°C"
+              unit="Â°C"
             />
             <SignalRow
               label="Pressure"
@@ -363,7 +363,7 @@ export default function AssetHealthPage() {
                   <h3 className="font-semibold">Observed Signals</h3>
                   <ul className="mt-2 space-y-2 text-sm text-slate-400">
                     <li>Vibration: {latest?.vibration ?? "N/A"} mm/s, {vibrationChange >= 0 ? "+" : ""}{vibrationChange.toFixed(2)}% change.</li>
-                    <li>Temperature: {latest?.temperature ?? "N/A"} °C, {temperatureChange >= 0 ? "+" : ""}{temperatureChange.toFixed(2)}% change.</li>
+                    <li>Temperature: {latest?.temperature ?? "N/A"} Â°C, {temperatureChange >= 0 ? "+" : ""}{temperatureChange.toFixed(2)}% change.</li>
                     <li>Pressure: {latest?.pressure ?? "N/A"} bar.</li>
                     <li>Flow rate: {latest?.flow_rate ?? "N/A"} units.</li>
                     <li>Rotational speed: {latest?.rpm ?? "N/A"} rpm.</li>

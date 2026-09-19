@@ -121,7 +121,7 @@ export default function OperationsPage() {
       setError("");
 
       const overviewResponse = await fetch(
-        "${process.env.NEXT_PUBLIC_API_URL}/operations/overview",
+        `${process.env.NEXT_PUBLIC_API_URL}/operations/overview`,
         {
           cache: "no-store",
         }
@@ -141,7 +141,7 @@ export default function OperationsPage() {
 
       try {
         const intelligenceResponse = await fetch(
-          "${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/intelligence",
+          `${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/intelligence`,
           {
             cache: "no-store",
           }

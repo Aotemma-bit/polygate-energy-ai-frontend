@@ -189,7 +189,7 @@ export default function FieldFlowPage() {
     async function loadEquipment() {
       try {
         const res = await fetch(
-          "${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/intelligence"
+          `${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/intelligence`
         );
 
         if (!res.ok) {
@@ -218,7 +218,7 @@ export default function FieldFlowPage() {
     async function loadRisk() {
       try {
         const res = await fetch(
-          "${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/risk"
+          `${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/risk`
         );
 
         if (!res.ok) {
@@ -249,7 +249,7 @@ export default function FieldFlowPage() {
     async function loadFailureModes() {
       try {
         const res = await fetch(
-          "${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/failure-modes"
+          `${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/failure-modes`
         );
 
         if (!res.ok) {
@@ -282,7 +282,7 @@ export default function FieldFlowPage() {
     async function loadMaintenanceRecommendations() {
       try {
         const res = await fetch(
-          "${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/maintenance-recommendations"
+          `${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/maintenance-recommendations`
         );
 
         if (!res.ok) {
@@ -335,7 +335,7 @@ export default function FieldFlowPage() {
 
     try {
       const res = await fetch(
-        "${process.env.NEXT_PUBLIC_API_URL}/fieldflow/ask",
+        `${process.env.NEXT_PUBLIC_API_URL}/fieldflow/ask`,
         {
           method: "POST",
           headers: {
@@ -371,7 +371,7 @@ export default function FieldFlowPage() {
 
     try {
       const res = await fetch(
-        "${process.env.NEXT_PUBLIC_API_URL}/equipment/analyze",
+        `${process.env.NEXT_PUBLIC_API_URL}/equipment/analyze`,
         {
           method: "POST",
           headers: {
@@ -434,7 +434,7 @@ export default function FieldFlowPage() {
           </div>
 
           <div className="rounded-full border border-emerald-900 bg-emerald-950/40 px-4 py-2 text-xs text-emerald-400">
-            <span className="mr-2">â—</span>
+            <span className="mr-2">Ã¢â€”Â</span>
             Knowledge Base Online
           </div>
         </header>
@@ -467,7 +467,7 @@ export default function FieldFlowPage() {
                   <div className="mt-2 flex flex-wrap items-center gap-3">
 
                     <h2 className="text-2xl font-semibold">
-                      {equipment.equipment.equipment_id} â€”{" "}
+                      {equipment.equipment.equipment_id} Ã¢â‚¬â€{" "}
                       {equipment.equipment.equipment_name}
                     </h2>
 
@@ -484,8 +484,8 @@ export default function FieldFlowPage() {
                   </div>
 
                   <p className="mt-2 text-sm text-zinc-500">
-                    {equipment.equipment.facility} Â·{" "}
-                    {equipment.equipment.equipment_type} Â·{" "}
+                    {equipment.equipment.facility} Ã‚Â·{" "}
+                    {equipment.equipment.equipment_type} Ã‚Â·{" "}
                     {equipment.equipment.manufacturer}
                   </p>
                 </div>
@@ -516,8 +516,8 @@ export default function FieldFlowPage() {
                   </div>
 
                   <div className="mt-1 text-xs text-zinc-500">
-                    {earliest.vibration} â†’ {latest.vibration}{" "}
-                    <span className="text-amber-400">â†‘</span>
+                    {earliest.vibration} Ã¢â€ â€™ {latest.vibration}{" "}
+                    <span className="text-amber-400">Ã¢â€ â€˜</span>
                   </div>
                 </div>
 
@@ -531,9 +531,9 @@ export default function FieldFlowPage() {
                   </div>
 
                   <div className="mt-1 text-xs text-zinc-500">
-                    {earliest.temperature} â†’{" "}
+                    {earliest.temperature} Ã¢â€ â€™{" "}
                     {latest.temperature}{" "}
-                    <span className="text-amber-400">â†‘</span>
+                    <span className="text-amber-400">Ã¢â€ â€˜</span>
                   </div>
                 </div>
 
@@ -547,9 +547,9 @@ export default function FieldFlowPage() {
                   </div>
 
                   <div className="mt-1 text-xs text-zinc-500">
-                    {earliest.flow_rate} â†’{" "}
+                    {earliest.flow_rate} Ã¢â€ â€™{" "}
                     {latest.flow_rate}{" "}
-                    <span className="text-zinc-400">â†“</span>
+                    <span className="text-zinc-400">Ã¢â€ â€œ</span>
                   </div>
                 </div>
 
@@ -577,7 +577,7 @@ export default function FieldFlowPage() {
                   </div>
 
                   <div className="mt-1 text-xs text-zinc-500">
-                    {earliest.rpm.toLocaleString()} â†’{" "}
+                    {earliest.rpm.toLocaleString()} Ã¢â€ â€™{" "}
                     {latest.rpm.toLocaleString()}
                   </div>
                 </div>
@@ -629,7 +629,7 @@ export default function FieldFlowPage() {
                           </div>
 
                           <div className="mt-1 text-xs text-zinc-500">
-                            {metric.from} â†’ {metric.to}
+                            {metric.from} Ã¢â€ â€™ {metric.to}
                           </div>
                         </div>
 
@@ -923,7 +923,7 @@ export default function FieldFlowPage() {
                                         {mode.name}
                                       </div>
                                       <div className="mt-1 text-xs text-zinc-500">
-                                        {mode.observed_signals.join(" Â· ")}
+                                        {mode.observed_signals.join(" Ã‚Â· ")}
                                       </div>
                                     </div>
 
@@ -945,7 +945,7 @@ export default function FieldFlowPage() {
                                           key={item}
                                           className="text-xs leading-5 text-zinc-400"
                                         >
-                                          â€¢ {item}
+                                          Ã¢â‚¬Â¢ {item}
                                         </li>
                                       ))}
                                     </ul>
@@ -1044,7 +1044,7 @@ export default function FieldFlowPage() {
                                               key={item}
                                               className="text-xs leading-5 text-zinc-400"
                                             >
-                                              â€¢ {item}
+                                              Ã¢â‚¬Â¢ {item}
                                             </li>
                                           )
                                         )}
@@ -1062,7 +1062,7 @@ export default function FieldFlowPage() {
                                                 key={item}
                                                 className="text-xs leading-5 text-zinc-400"
                                               >
-                                                â€¢ {item}
+                                                Ã¢â‚¬Â¢ {item}
                                               </li>
                                             )
                                           )}
@@ -1120,7 +1120,7 @@ export default function FieldFlowPage() {
                                   ? `${signal.direction === "declining" ? "-" : signal.change_percent > 0 ? "+" : ""}${signal.change_percent.toFixed(1)}%`
                                   : signal.events !== undefined
                                     ? `${signal.events} events`
-                                    : "â€”"}
+                                    : "Ã¢â‚¬â€"}
                               </div>
 
                               <div

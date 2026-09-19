@@ -43,7 +43,7 @@ export default function EventAlertPanel() {
       setError("");
 
       const response = await fetch(
-        "${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/events",
+        `${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/events`,
         { cache: "no-store" }
       );
 

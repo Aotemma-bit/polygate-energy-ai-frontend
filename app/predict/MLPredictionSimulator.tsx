@@ -123,7 +123,7 @@ export default function MLPredictionSimulator({
       setResult(null);
 
       const response = await fetch(
-        "${process.env.NEXT_PUBLIC_API_URL}/predict/ml",
+        `${process.env.NEXT_PUBLIC_API_URL}/predict/ml`,
         {
           method: "POST",
           headers: {

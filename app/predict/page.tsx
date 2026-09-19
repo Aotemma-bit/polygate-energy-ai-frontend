@@ -156,13 +156,13 @@ export default function PredictPage() {
       const [predictResponse, modelResponse, validationResponse] =
         await Promise.all([
           fetch(
-            "${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/predict"
+            `${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/predict`
           ),
           fetch(
-            "${process.env.NEXT_PUBLIC_API_URL}/predict/ml/info"
+            `${process.env.NEXT_PUBLIC_API_URL}/predict/ml/info`
           ),
           fetch(
-            "${process.env.NEXT_PUBLIC_API_URL}/predict/ml/validation"
+            `${process.env.NEXT_PUBLIC_API_URL}/predict/ml/validation`
           ),
         ]);
 
@@ -913,7 +913,7 @@ function TrendCard({
       <div className="mt-2 text-2xl font-bold">
         {value !== undefined
           ? `${value > 0 ? "+" : ""}${value}${unit}`
-          : "â€”"}
+          : "Ã¢â‚¬â€"}
       </div>
 
     </div>

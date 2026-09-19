@@ -55,7 +55,7 @@ export default function PredictPage() {
       setError("");
 
       const response = await fetch(
-        "${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/predict",
+        `${process.env.NEXT_PUBLIC_API_URL}/equipment/C-104/predict`,
         { cache: "no-store" }
       );
 
@@ -279,7 +279,7 @@ export default function PredictPage() {
                           <div className="mt-1 text-xs text-zinc-600">
                             {signal.direction}
                             {signal.change_percent !== null
-                              ? ` Â· ${signal.change_percent}%`
+                              ? ` Ã‚Â· ${signal.change_percent}%`
                               : ""}
                           </div>
                         </div>
@@ -364,7 +364,7 @@ export default function PredictPage() {
                 onClick={loadPrediction}
                 className="rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-2.5 text-xs text-zinc-300 hover:bg-zinc-900"
               >
-                Refresh Prediction Data â†»
+                Refresh Prediction Data Ã¢â€ Â»
               </button>
             </div>
           </>
